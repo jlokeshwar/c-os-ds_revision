@@ -1,0 +1,54 @@
+#include <stdio.h>
+#define c 32
+#define f 1.8
+#define d 7
+const int PIE=3.14;
+enum cases{one=1,two,three,four,five,six};
+int main()
+{
+   unsigned int choice,n,week,days,r;
+    float far,cel,a;
+    printf("1.fahrenheit to celcius 2.celcius to fahrenheit 3.days to week 4.weeks to days 5.raduis of circle\n");
+
+        printf("enter your choice: ");
+        scanf("%d",&choice);
+        switch(choice){
+            case one:
+                         scanf("%f",&far);
+                         cel=far-c/f;
+                         printf("%f\n",cel);
+                         break;
+            case two:
+                        scanf("%f",&cel);
+                        far=(cel*f)+c;
+                         printf("%f\n",far);
+                         break;
+            case three:
+                      scanf("%u",&n);
+                      week=n/d;
+                      days=n%d;
+                      printf("no.of %u weeks and %u days\n",week,days);
+                      break;
+                      
+            case four:
+                    scanf("%u",&week);
+                    days=d*week;
+                    printf("no.of days %u \n",days);
+                    break;
+            
+            case five:
+                    scanf("%u",&r);
+                    a=r*r*PIE;
+                    printf("area of circle %f",a);
+                    break;
+            
+            case six:
+                    printf("exit");
+                        break;
+            default:
+                printf("this is invalid..try only from 1 to 5 ");
+        }
+    
+
+    return 0;
+}
